@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<%= @task.details %>
+<% if @task.completed %>
+  <input type="checkbox" checked="true">
+<% else %>
+  <input type="checkbox">
+<% end %>
+<hr>
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Delete', task_path(@task), method: :delete %>
+<%= link_to 'Back to the list', tasks_path %>
